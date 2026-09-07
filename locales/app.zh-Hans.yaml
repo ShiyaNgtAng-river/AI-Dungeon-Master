@@ -1,0 +1,87 @@
+language:
+  select_title: "请选择语言（回车使用默认）："
+  default_hint: "默认: {default_lang}"
+  option: "{index}. {name} [{code}]"
+  selected: "已切换语言：{name}"
+  invalid: "输入无效，使用默认语言。"
+
+banner:
+  title_line: "============================================================"
+  rpg:
+    title: "       ⚔  AI Dungeon Master  ⚔"
+    intro: "  输入你的行动来探索这个世界。"
+  turtle:
+    title: "       🐢  海龟汤：{module_name}  🐢"
+    intro: "  提出问题来推理真相。"
+  special: "  特殊命令:"
+
+cmd:
+  help:
+    quit: "    /quit   - 退出游戏"
+    save: "    /save   - 手动保存"
+    help: "    /help   - 显示帮助"
+    state: "    /state  - 查看当前状态"
+    gates: "    /gates  - 查看 Gate 解锁进度"
+    new: "    /new    - 重新开始"
+    history: "    /history - 查看近期对话"
+
+prompt:
+  action_rpg: "🎮 你的行动 > "
+  question_turtle: "❓ 你的问题 > "
+  decision_turtle: "▶ 你的决定 > "
+  final_choice: "⚖ 你的选择 > "
+  continue_default: "是否继续深入？"
+  final_choice_hint: "你们选择关闭哪一台？左边，还是右边？"
+
+system:
+  save_ok: "[系统] 游戏已保存。"
+  save_bye: "[系统] 游戏已保存。再见！"
+  corrupted_save: "[系统] 存档文件损坏，无法加载。错误: {error}"
+  corrupted_backup: "[系统] 备份文件也已损坏，无法恢复。"
+  restore_backup_prompt: "[系统] 是否尝试从备份恢复？(y/n): "
+  restore_backup_ok: "[系统] 备份恢复成功。"
+  restore_backup_fail: "[系统] 备份恢复失败。"
+  start_new_after_corrupt: "[系统] 将开始新游戏。"
+  interrupted: "[系统] 游戏中断，正在保存..."
+  input_invalid: "[系统] 输入包含无法解析的字符，请重新输入。"
+  unknown_cmd: "[系统] 未知命令: {cmd}"
+  load_found: "[系统] 发现已有存档，是否继续？(y/n): "
+  load_ok: "[系统] 存档加载成功。"
+  new_game: "[系统] 开始新游戏。"
+  new_confirm: "[系统] 确认开始新游戏？当前存档将被覆盖。(y/n): "
+  new_cancel: "[系统] 已取消。"
+  choose_left_right: "[系统] 请输入“左边”或“右边”。"
+
+turtle:
+  gate_unlocked: "  [Gate 解锁] {gate_id}"
+  answer_wrap: "  「{answer}」"
+  game_over: "[系统] 海龟汤结束。"
+  gate_status:
+    no_gate: "当前章节无 Gate。"
+    unlocked: "已解锁"
+    locked: "未解锁"
+    main_gate: "主Gate"
+    sub_gate: "辅Gate"
+  audit:
+    init_line: "访问权限：家庭层（已开启）"
+    access_gained: "访问权限 +1（{day}）"
+    access_stopped: "访问中止（{day}）"
+  hint:
+    default_generic: "你翻到一页被反复按平的纸，像有人在掩饰某个问题。"
+    target_hint: "日记边缘微微发烫，像在提醒你再问问「{target}」这件事。"
+    repeat_line: "有一行字被反复描黑，像在等你换个问法。"
+  stop_decision: "[系统] 你选择暂缓深入。"
+  choice:
+    left_right_hint: "你们选择关闭哪一台？左边，还是右边？"
+
+rpg:
+  dm_thinking: "[DM 思考中...]"
+  event_prefix: "[事件] {summary}"
+  memory_compressed: "[记忆] 已压缩历史记忆。"
+  cp_triggered: "[Checkpoint] {checkpoint_id} -> {state} (confidence={confidence:.2f})"
+  chapter_enter: "[系统] 进入新章节: {chapter_name}"
+  chapter_missing: "[系统] 章节 {chapter_id} 尚未编写，继续当前章节。"
+  redline: "[红线检查] 检测到违规关键词「{keyword}」，请求重新生成。"
+
+test:
+  only_zh_hans: "仅简体存在"

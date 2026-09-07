@@ -1,0 +1,84 @@
+language:
+  select_title: "Select language (press Enter to use default):"
+  default_hint: "Default: {default_lang}"
+  option: "{index}. {name} [{code}]"
+  selected: "Language switched to: {name}"
+  invalid: "Invalid input. Using default language."
+
+banner:
+  title_line: "============================================================"
+  rpg:
+    title: "       ⚔  AI Dungeon Master  ⚔"
+    intro: "  Enter your action to explore this world."
+  turtle:
+    title: "       🐢  Lateral Thinking: {module_name}  🐢"
+    intro: "  Ask questions to uncover the truth."
+  special: "  Special commands:"
+
+cmd:
+  help:
+    quit: "    /quit   - Exit game"
+    save: "    /save   - Save manually"
+    help: "    /help   - Show help"
+    state: "    /state  - Show current state"
+    gates: "    /gates  - Show gate unlock status"
+    new: "    /new    - Restart game"
+    history: "    /history - Show recent dialogue"
+
+prompt:
+  action_rpg: "🎮 Your action > "
+  question_turtle: "❓ Your question > "
+  decision_turtle: "▶ Your decision > "
+  final_choice: "⚖ Your choice > "
+  continue_default: "Continue deeper?"
+  final_choice_hint: "Which machine do you shut down? Left or right?"
+
+system:
+  save_ok: "[System] Game saved."
+  save_bye: "[System] Game saved. Goodbye!"
+  corrupted_save: "[System] Save file is corrupted and cannot be loaded. Error: {error}"
+  corrupted_backup: "[System] Backup file is also corrupted and cannot be restored."
+  restore_backup_prompt: "[System] Try restoring from backup? (y/n): "
+  restore_backup_ok: "[System] Backup restored successfully."
+  restore_backup_fail: "[System] Backup restore failed."
+  start_new_after_corrupt: "[System] Starting a new game."
+  interrupted: "[System] Interrupted. Saving..."
+  input_invalid: "[System] Input contains invalid characters. Please try again."
+  unknown_cmd: "[System] Unknown command: {cmd}"
+  load_found: "[System] Save file found. Continue? (y/n): "
+  load_ok: "[System] Save loaded."
+  new_game: "[System] New game started."
+  new_confirm: "[System] Confirm new game? Current save will be overwritten. (y/n): "
+  new_cancel: "[System] Cancelled."
+  choose_left_right: "[System] Please enter left or right."
+
+turtle:
+  gate_unlocked: "  [Gate Unlocked] {gate_id}"
+  answer_wrap: "  \"{answer}\""
+  game_over: "[System] Lateral thinking game over."
+  gate_status:
+    no_gate: "No Gate in this chapter."
+    unlocked: "Unlocked"
+    locked: "Locked"
+    main_gate: "Main Gate"
+    sub_gate: "Sub Gate"
+  audit:
+    init_line: "Access: Family Layer (unlocked)"
+    access_gained: "Access +1 ({day})"
+    access_stopped: "Access halted ({day})"
+  hint:
+    default_generic: "You turn to a page pressed flat over and over, like someone is hiding a question."
+    target_hint: "The diary edge feels warm, as if urging you to ask again about \"{target}\"."
+    repeat_line: "One line is blackened again and again, as if waiting for a different phrasing."
+  stop_decision: "[System] You chose to stop for now."
+  choice:
+    left_right_hint: "Which machine do you shut down? Left or right?"
+
+rpg:
+  dm_thinking: "[DM is thinking...]"
+  event_prefix: "[Event] {summary}"
+  memory_compressed: "[Memory] History compressed."
+  cp_triggered: "[Checkpoint] {checkpoint_id} -> {state} (confidence={confidence:.2f})"
+  chapter_enter: "[System] Entering chapter: {chapter_name}"
+  chapter_missing: "[System] Chapter {chapter_id} is not implemented yet. Staying in current chapter."
+  redline: "[Redline] Violating keyword detected: \"{keyword}\". Regenerating."

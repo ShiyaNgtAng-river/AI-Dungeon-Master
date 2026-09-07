@@ -1,0 +1,84 @@
+language:
+  select_title: "請選擇語言（直接 Enter 使用預設）："
+  default_hint: "預設: {default_lang}"
+  option: "{index}. {name} [{code}]"
+  selected: "已切換語言：{name}"
+  invalid: "輸入無效，使用預設語言。"
+
+banner:
+  title_line: "============================================================"
+  rpg:
+    title: "       ⚔  AI Dungeon Master  ⚔"
+    intro: "  輸入你的行動來探索這個世界。"
+  turtle:
+    title: "       🐢  海龜湯：{module_name}  🐢"
+    intro: "  提出問題來推理真相。"
+  special: "  特殊指令:"
+
+cmd:
+  help:
+    quit: "    /quit   - 退出遊戲"
+    save: "    /save   - 手動保存"
+    help: "    /help   - 顯示幫助"
+    state: "    /state  - 查看當前狀態"
+    gates: "    /gates  - 查看 Gate 解鎖進度"
+    new: "    /new    - 重新開始"
+    history: "    /history - 查看近期對話"
+
+prompt:
+  action_rpg: "🎮 你的行動 > "
+  question_turtle: "❓ 你的問題 > "
+  decision_turtle: "▶ 你的決定 > "
+  final_choice: "⚖ 你的選擇 > "
+  continue_default: "是否繼續深入？"
+  final_choice_hint: "你們選擇關閉哪一台？左邊，還是右邊？"
+
+system:
+  save_ok: "[系統] 遊戲已保存。"
+  save_bye: "[系統] 遊戲已保存。再見！"
+  corrupted_save: "[系統] 存檔檔案損壞，無法載入。錯誤: {error}"
+  corrupted_backup: "[系統] 備份檔案也已損壞，無法恢復。"
+  restore_backup_prompt: "[系統] 是否嘗試從備份恢復？(y/n): "
+  restore_backup_ok: "[系統] 備份恢復成功。"
+  restore_backup_fail: "[系統] 備份恢復失敗。"
+  start_new_after_corrupt: "[系統] 將開始新遊戲。"
+  interrupted: "[系統] 遊戲中斷，正在保存..."
+  input_invalid: "[系統] 輸入包含無法解析的字元，請重新輸入。"
+  unknown_cmd: "[系統] 未知指令: {cmd}"
+  load_found: "[系統] 發現已有存檔，是否繼續？(y/n): "
+  load_ok: "[系統] 存檔載入成功。"
+  new_game: "[系統] 開始新遊戲。"
+  new_confirm: "[系統] 確認開始新遊戲？當前存檔將被覆蓋。(y/n): "
+  new_cancel: "[系統] 已取消。"
+  choose_left_right: "[系統] 請輸入「左邊」或「右邊」。"
+
+turtle:
+  gate_unlocked: "  [Gate 解鎖] {gate_id}"
+  answer_wrap: "  「{answer}」"
+  game_over: "[系統] 海龜湯結束。"
+  gate_status:
+    no_gate: "當前章節無 Gate。"
+    unlocked: "已解鎖"
+    locked: "未解鎖"
+    main_gate: "主Gate"
+    sub_gate: "輔Gate"
+  audit:
+    init_line: "存取權限：家庭層（已開啟）"
+    access_gained: "存取權限 +1（{day}）"
+    access_stopped: "存取中止（{day}）"
+  hint:
+    default_generic: "你翻到一頁被反覆按平的紙，像有人在掩飾某個問題。"
+    target_hint: "日記邊緣微微發燙，像在提醒你再問問「{target}」這件事。"
+    repeat_line: "有一行字被反覆描黑，像在等你換個問法。"
+  stop_decision: "[系統] 你選擇暫緩深入。"
+  choice:
+    left_right_hint: "你們選擇關閉哪一台？左邊，還是右邊？"
+
+rpg:
+  dm_thinking: "[DM 思考中...]"
+  event_prefix: "[事件] {summary}"
+  memory_compressed: "[記憶] 已壓縮歷史記憶。"
+  cp_triggered: "[Checkpoint] {checkpoint_id} -> {state} (confidence={confidence:.2f})"
+  chapter_enter: "[系統] 進入新章節: {chapter_name}"
+  chapter_missing: "[系統] 章節 {chapter_id} 尚未編寫，繼續當前章節。"
+  redline: "[紅線檢查] 檢測到違規關鍵詞「{keyword}」，請求重新生成。"
